@@ -1,0 +1,22 @@
+{
+    "name": "blue32a/monolog-google-cloud-logging",
+    "description": "Google Cloud Logging handler for Monolog.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "blue32a",
+            "email": "blue32a.jp@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Blue32a\\MonologGoogleCloudLoggingHandler\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "config": {
+        "sort-packages": true
+    },
+    "require": {}
+}
