@@ -13,15 +13,19 @@ class GoogleCloudLoggingHandler extends AbstractProcessingHandler
 {
     protected PsrLogger $logger;
 
+    /**
+     * @param array<string, mixed> $options Logger options
+     */
     public function __construct(
         string $name,
         LoggingClient $client,
+        array $options = [],
         int $level = Logger::DEBUG,
         bool $bubble = true
     ) {
         parent::__construct($level, $bubble);
 
-        $this->logger = $client->psrLogger($name);
+        $this->logger = $client->psrLogger($name, $options);
     }
 
     /**
