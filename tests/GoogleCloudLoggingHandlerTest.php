@@ -83,4 +83,16 @@ class GoogleCloudLoggingHandlerTest extends TestCase
 
         $handler->handle($recode);
     }
+
+    /**
+     * @test
+     */
+    public function testFactoryLoggingClient(): void
+    {
+        $config = ['projectId' => 'xxxxx'];
+
+        $loggingClient = GoogleCloudLoggingHandler::factoryLoggingClient($config);
+
+        $this->assertInstanceOf(LoggingClient::class, $loggingClient);
+    }
 }

@@ -14,6 +14,14 @@ class GoogleCloudLoggingHandler extends AbstractProcessingHandler
     protected PsrLogger $logger;
 
     /**
+     * @param array<string, mixed> $config
+     */
+    public static function factoryLoggingClient(array $config = []): LoggingClient
+    {
+        return new LoggingClient($config);
+    }
+
+    /**
      * @param array<string, mixed> $options Logger options
      */
     public function __construct(
